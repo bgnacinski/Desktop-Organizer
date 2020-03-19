@@ -5,6 +5,3 @@ Desktop organizer written in python. Supports .txt, .pdf, web formats, programmi
 Simply open terminal and change directory to desktop organizer directory
 
 type "python3 desktop-organizer.py" and click Enter
-
-
-#### Soon propably I will support libre office
