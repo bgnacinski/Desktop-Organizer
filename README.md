@@ -1,5 +1,5 @@
 # Desktop-Organizer
-Desktop organizer written in python. Supports .txt, .pdf, web formats and programming file types. Linux distro.
+Desktop organizer written in python. Supports .txt, .pdf, web formats, programming file types and libreoffice. Linux distro.
 
 ## How to use it
 Simply open terminal and change directory to desktop organizer directory
