@@ -28,28 +28,59 @@ try:
     os.mkdir(path + "web")
     os.mkdir(path + "programming")
 
+    # libreoffice
+
+    os.mkdir(path + "libreoffice")
+    os.mkdir(path + "libreoffice/writer")
+    os.mkdir(path + "libreoffice/calc")
+    os.mkdir(path + "libreoffice/impress")
+    os.mkdir(path + "libreoffice/draw")
+    os.mkdir(path + "libreoffice/base")
+
 except:
     pass
 
 files_on_desktop, x = scan_dir(path)
 print("{} files will be moved".format(files_on_desktop))
 
-for file in files_on_desktop:
-    if ".txt" in file:
-        move_file(file, path + "txt")
-        print("[*] {} moved to txt folder".format(file))
+for filename in files_on_desktop:
+    if ".txt" in filename:
+        move_file(filename, path + "txt")
+        print("[*] {} moved to txt folder".format(filename))
 
-    elif ".pdf" in file:
-        move_file(file, path + "pdf")
-        print("[*] {} moved to pdf folder".format(file))
+    elif ".pdf" in filename:
+        move_file(filename, path + "pdf")
+        print("[*] {} moved to pdf folder".format(filename))
 
-    elif ".html" in file or ".php" in file or ".css" in file or ".js" in file:
-        move_file(file, path + "web")
-        print("[*] {} moved to web folder".format(file))
+    elif ".html" in filename or ".php" in filename or ".css" in filename or ".js" in filename:
+        move_file(filename, path + "web")
+        print("[*] {} moved to web folder".format(filename))
 
-    elif ".py" in file or ".rb" in file or ".cs" in file or ".cpp" in file or ".c" in file or ".sh" in file or ".java" in file:
-        move_file(file, path + "programming")
-        print("[*] {} moved to programming folder".format(file))
+    elif ".py" in filename or ".rb" in filename or ".cs" in filename or ".cpp" in filename or ".c" in filename or ".sh" in filename or ".java" in filename:
+        move_file(filename, path + "programming")
+        print("[*] {} moved to programming folder".format(filename))
+
+    #libreoffice
+
+    elif ".odt" in filename:
+        move_file(filename, path + "libreoffice/writer")
+        print("[*] {} moved to writer folder".format(filename))
+
+    elif ".ods" in filename:
+        move_file(filename, path + "libreoffice/calc")
+        print("[*] {} moved to calc folder".format(filename))
+
+    elif ".odb" in filename:
+        move_file(filename, path + "libreoffice/base")
+        print("[*] {} moved to base folder".format(filename))
+
+    elif ".odg" in filename:
+        move_file(filename, path + "libreoffice/draw")
+        print("[*] {} moved to draw folder".format(filename))
+
+    elif ".odp" in filename:
+        move_file(filename, path + "libreoffice/impress")
+        print("[*] {} moved to impress folder".format(filename))
 
     else:
-        print("[!] {} is unsupported file type.".format(file))
+        print("[!] {} is unsupported filename type.".format(filename))
